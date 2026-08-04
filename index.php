@@ -13,4 +13,6 @@
                     <?php the_content() ?>
                 <?php endwhile; ?>
 
+           <p>La passivité, un poison moderne</p>     
+
 <?php get_footer(); ?>
