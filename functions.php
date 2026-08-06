@@ -15,4 +15,27 @@ add_action( 'after_setup_theme', 'register_my_menu' );
  
 
 
+function nadbarayad_enqueue_assets() {
+
+    // Feuille de style principale
+    wp_enqueue_style(
+        'nadbarayad-style',
+        get_template_directory_uri() . '/assets/sass/style.css',
+        array(),
+        wp_get_theme()->get('Version')
+    );
+
+    // Fichier JavaScript
+    wp_enqueue_script(
+        'nadbarayad-script',
+        get_template_directory_uri() . '/assets/js/script.js',
+        array(),
+        wp_get_theme()->get('Version'),
+        true
+    );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'nadbarayad_enqueue_assets' );
+
 
