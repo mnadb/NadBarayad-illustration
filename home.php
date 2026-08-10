@@ -1,6 +1,6 @@
 <?php 
 /**
- * Blog Template
+ * Template Name: Blog
  *
  * @package NadBarayad
  */
@@ -29,4 +29,7 @@
 		</article>
 
 	<?php endwhile; endif; ?>
+
+	<?php get_template_part( 'archive' ); ?>
+	
 <?php get_footer(); ?>

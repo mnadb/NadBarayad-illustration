@@ -1,6 +1,6 @@
 <?php 
 /**
- * archive Template
+ * Template Name: Archive
  *
  * @package NadBarayad
  */
@@ -27,6 +27,21 @@
                 <a href="<?php the_permalink(); ?>" class="post__link">Lire la suite</a>
             </p>
 		</article>
+		<?php 
+    if ( is_category() ) {
+        $title = "Catégorie : " . single_tag_title( '', false );
+    }
+    elseif ( is_tag() ) {
+        $title = "Étiquette : " . single_tag_title( '', false );
+    }
+    elseif ( is_search() ) {
+        $title = "Vous avez recherché : " . get_search_query();
+    }
+    else {
+        $title = 'Le Blog';
+    }
+?>
+<h1><?php echo $title; ?></h1>
 
 	<?php endwhile; endif; ?>
 <?php get_footer(); ?>

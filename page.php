@@ -1,6 +1,6 @@
 <?php 
 /**
- * Page Template
+ * Template Name: Page
  *
  * @package NadBarayad
  */

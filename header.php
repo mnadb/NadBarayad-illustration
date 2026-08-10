@@ -1,12 +1,13 @@
 <?php
 /**
- * Header Template
+ * Template Name: Header
  *
  * @package WordPress
  * @subpackage NadBarayad
  * @since 1.0
  */
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
