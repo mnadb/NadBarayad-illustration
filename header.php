@@ -19,11 +19,12 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-<header class="header">
+<header class="header">   
+    <nav class="menus">
     <a href="<?php echo home_url('/'); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo NadBarayad.png" alt="logo">
     </a>
-    <nav class="menus">
+ 
           <?php
                     wp_nav_menu(array( // Affiche le menu principal
                         'theme_location' => 'header',
@@ -36,11 +37,7 @@
     </nav>
 </header>
   
-    <main>
-
-        <h1>Bienvenue</h1>
-
-    </main>
+   
 
 
 

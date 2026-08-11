@@ -1,8 +1,2 @@
 <?php 
-/**
- * Index Template
- *
- * @package NadBarayad
- */
-
-?>
+// Silence is golden.

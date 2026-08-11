@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: tomato;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.illustration_paragraph {
+    color: yellowgreen;
+   
+}
+
+.card_lemon {
+  width: 300px;
+  background: rgb(240, 232, 201);
+  border-radius: 28px;
+  padding: 14px;
+  margin: 10px 0 0 10px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+    figure {
+        position: relative;
+        height: 190px;
+        border-radius: 20px;
+        overflow:hidden;
+        background:linear-gradient(180deg,#fcd9b0 0%,#f3b98c 35%,#a9a6c9 55%,#7f88a8 100%);
+    }
+    
+}
