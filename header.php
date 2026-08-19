@@ -21,21 +21,42 @@
     <?php wp_body_open(); ?>
 <header class="header">   
     <nav class="menus">
-    <a href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo NadBarayad.png" alt="logo">
-    </a>
- 
-          <?php
-                    wp_nav_menu(array( // Affiche le menu principal
-                        'theme_location' => 'header',
-                        'container' => false,
-                        'menu_class' => 'nav-menu',
-                        'menu_id'    => 'nav-menu',
-                    ));
-                ?>
+
+        <!-- Logo -->
+        <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
+            <img 
+                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.png" 
+                alt="<?php bloginfo('name'); ?>"
+            >
+        </a>
+
+        <!-- Bouton hamburger -->
+        <button 
+            class="menu-toggle" 
+            aria-controls="nav-menu" 
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menu WordPress -->
+        <div class="navigation">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'header',
+                'container'      => false,
+                'menu_class'     => 'nav-menu',
+                'menu_id'        => 'nav-menu',
+            ));
+            ?>
+        </div>
 
     </nav>
 </header>
+
   
    
 

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "aBeeZee" sans-serif;
+    font-family: "aBeeZee", sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
@@ -46,18 +46,68 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-/* Menu */
- nav.menus {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 99, 71, 0.5);
+/* =========================
+   HEADER
+========================= */
 
-  ul  {
-    display: flex;
-    gap: 25px;
-    font-size: 1rem;
-   
-    }
-    
+.header {
+    width: 100%;
 }
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fdfcf9;
+}
+
+.logo img {
+    width: 300px;
+    max-width: 80%;
+    height: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+/* le bloc qui contient le menu WordPress  */
+.navigation {
+    background: #f6a398;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu { /* ici contrôle les liens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+
+
+ a {
+    color: #111;
+    font-weight: 500;
+    font-size: 25px;
+    transition: opacity 0.3s ease;
+}
+
+ a:hover {
+   color: #fff;
+}
+}
+/* Etat desktop*/  /* propriété permettant de cacher le bouton */
+ .menu-toggle {
+        display: none;
+
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #111;
+        }
+    }

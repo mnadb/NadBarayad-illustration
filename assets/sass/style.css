@@ -17,7 +17,7 @@ Text Domain:  NadBarayad Illustration
 }
 
 body {
-  font-family: "aBeeZee" sans-serif;
+  font-family: "aBeeZee", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #333;
@@ -56,17 +56,64 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Menu */
-nav.menus {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(255, 99, 71, 0.5);
+/* =========================
+   HEADER
+========================= */
+.header {
+  width: 100%;
 }
-nav.menus ul {
+
+.logo {
   display: flex;
-  gap: 25px;
-  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: #fdfcf9;
+}
+
+.logo img {
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+/* le bloc qui contient le menu WordPress  */
+.navigation {
+  background: #f6a398;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu { /* ici contrôle les liens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+.nav-menu a {
+  color: #111;
+  font-weight: 500;
+  font-size: 25px;
+  transition: opacity 0.3s ease;
+}
+.nav-menu a:hover {
+  color: #fff;
+}
+
+/* Etat desktop*/ /* propriété permettant de cacher le bouton */
+.menu-toggle {
+  display: none;
+}
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #111;
 }
 
 h1 {
@@ -88,10 +135,60 @@ h1 {
   margin: 10px 0 0 10px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
 }
-.card_lemon figure {
-  position: relative;
-  height: 190px;
-  border-radius: 20px;
-  overflow: hidden;
-  background: linear-gradient(180deg, #fcd9b0 0%, #f3b98c 35%, #a9a6c9 55%, #7f88a8 100%);
+.card_lemon .img-lemon {
+  border-radius: 18px !important;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+@media screen and (max-width: 600px) {
+  .menus {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .menus .logo img {
+    width: 180px;
+  }
+  .navigation {
+    display: none; /* Cachée */
+    width: 100%;
+    margin-top: 10px;
+  }
+  .navigation.active {
+    display: block; /* Visible */
+  }
+  .nav-menu {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+  .nav-menu a {
+    font-size: 15px;
+  }
+  /* Etat mobile */ /* propriété permettant de refaire apparaître le bouton */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .menu-toggle span {
+    width: 25px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .menu-toggle.active span:nth-child(1) {
+    /* rotation */
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    /* disparition */
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    /* rotation inverse */
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }/*# sourceMappingURL=style.css.map */

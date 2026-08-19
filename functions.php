@@ -28,7 +28,7 @@ function nadbarayad_enqueue_assets() {
     // Fichier JavaScript
     wp_enqueue_script(
         'nadbarayad-script',
-        get_template_directory_uri() . '/assets/js/script.js',
+        get_template_directory_uri() . '/assets/sass/js/script.js',
         array(),
         wp_get_theme()->get('Version'),
         true

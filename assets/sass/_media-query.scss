@@ -1,0 +1,68 @@
+/* =========================
+   NAVIGATION
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .menus {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; 
+        padding: 0 20px;
+        
+        .logo img {
+            width: 180px;
+        }
+    }
+
+    .navigation {
+        display: none; /* Cachée */
+        width: 100%;
+        margin-top: 10px;
+        
+        &.active {
+        display: block; /* Visible */
+        }
+    }
+    .nav-menu {
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+       
+        a {
+            font-size: 15px;
+        }
+
+    }
+    /* Etat mobile */  /* propriété permettant de refaire apparaître le bouton */
+    .menu-toggle { 
+       display: flex;
+       flex-direction: column;
+       gap: 5px;
+      
+
+       span {
+        width: 25px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+       }
+
+       &.active {
+
+        span:nth-child(1) {
+    /* rotation */
+      transform: translateY(8px) rotate(45deg);
+        }
+        span:nth-child(2) {
+    /* disparition */
+          opacity: 0;
+        }
+        span:nth-child(3) {
+    /* rotation inverse */
+       transform: translateY(-8px) rotate(-45deg);
+        }
+       }
+
+    }
+
+}
