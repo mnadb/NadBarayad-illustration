@@ -3,23 +3,66 @@ h1 {
     padding: 20px;
     color: tomato;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-}
-
-.illustration_paragraph {
-    color: yellowgreen;
-   
-}
-
-.card_lemon {
-  width: 300px;
-  background: rgb(240, 232, 201);
-  border-radius: 28px;
-  padding: 14px;
-  margin: 10px 0 0 10px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-
-   .img-lemon {
-        border-radius: 18px !important;
-    }
     
+}
+.grid_oeuvres{
+  
+  max-width: 1200px;
+  margin: 0 auto; //centre horizontalement.
+  padding: 40px 30px;
+  gap: 30px;
+
+}
+.card_lemon {
+  width: 100%;
+  background: rgb(155, 150, 114);
+  border-radius: 28px;
+  padding: 20px;
+  margin-top: 10px;
+  
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s;
+
+  .img-lemon {
+    border-radius: 18px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+//lightbox
+.lightbox.active {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    &.active {
+        display: flex;
+    }
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 40px;
+
+    cursor: pointer;
 }

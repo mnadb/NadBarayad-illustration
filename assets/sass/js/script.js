@@ -24,3 +24,53 @@ document.addEventListener("DOMContentLoaded", () => {
         
     });
 });
+
+//Lightbox
+const images = document.querySelectorAll('.img-lemon img');
+const lightbox = document.getElementById('lightbox');
+const  lightboxImage = document.getElementById('lightbox-image');
+const closeButton = document.getElementById('lightbox-close');
+
+// écoute le clic sur chaque image
+images.forEach((image) => {
+
+    image.addEventListener('click', () => {
+
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.classList.add('active');
+
+    });
+
+});
+
+function closeLightbox() {
+
+    lightbox.classList.remove('active');
+
+}
+
+
+closeButton.addEventListener('click', closeLightbox);
+
+
+lightbox.addEventListener('click', (event) => {
+
+    if (event.target === lightbox) {
+
+        closeLightbox();
+
+    }
+
+});
+
+
+document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Escape') {
+
+        closeLightbox();
+
+    }
+
+});
