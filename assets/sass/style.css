@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*
+Theme Name: NadBarayad Illustration
+Theme URI: http://localhost/portfolio
+Author: NadBarayad
+Author URI: http://localhost/portfolio
+Description: Thème WordPress personnalisé pour une illustratrice – illustrations, dessin, processus, bande dessinée, gif, animation
+Version: 1.0
+Tags: illustrations, dessin, processus, bande dessinée, gif, animation
+Text Domain:  NadBarayad Illustration
+*/
+header {
+  position: relative;
+}
+
+.nadbanniere img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.menus {
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  /* Bloc contenant le menu WordPress */
+}
+.menus .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menus {
+  /* Liste contenant les liens */
+}
+.menus .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menus .nav-menu a {
+  color: #6d9fe7;
+  font-weight: 500;
+  font-size: 25px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.menus .nav-menu a:hover {
+  color: #ffa23f;
+}
+
+h1 {
+  font-family: "Emilys Candy", serif;
+  color: #FFA23F;
+}
+
+@font-face {
+  font-family: "Emilys Candy";
+  src: url("../fonts/EmilysCandy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Qwitcher Grypen";
+  src: url("../fonts/QwitcherGrypen-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Qwitcher Grypen";
+  src: url("../fonts/QwitcherGrypen-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 clamp(20px, 5vw, 80px);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Qwitcher Grypen";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

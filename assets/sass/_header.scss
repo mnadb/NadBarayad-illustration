@@ -1,0 +1,60 @@
+header {
+    position: relative;
+}
+
+.nadbanniere img  {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menus {
+    font-family: "Emilys Candy", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    position: absolute;
+    top: 25px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 10;
+
+    /* Bloc contenant le menu WordPress */
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Liste contenant les liens */
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 35px;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        a {
+            color: #6d9fe7;
+            font-weight: 500;
+            font-size: 25px;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #ffa23f;
+            }
+        }
+    }
+}
