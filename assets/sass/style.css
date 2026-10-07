@@ -13,25 +13,28 @@ header {
   position: relative;
 }
 
+/* Bannière */
 .nadbanniere img {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 720px;
   margin: 0 auto;
+  object-fit: cover;
 }
 
+/* Zone du menu */
 .menus {
-  font-family: "Emilys Candy", serif;
-  font-weight: 400;
-  font-style: normal;
   position: absolute;
   top: 25px;
   left: 0;
+  z-index: 10;
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 10;
-  /* Bloc contenant le menu WordPress */
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* Conteneur du menu WordPress */
 }
 .menus .navigation {
   display: flex;
@@ -39,7 +42,7 @@ header {
   align-items: center;
 }
 .menus {
-  /* Liste contenant les liens */
+  /* Liste du menu */
 }
 .menus .nav-menu {
   display: flex;
@@ -49,21 +52,64 @@ header {
   margin: 0;
   padding: 0;
   list-style: none;
+  /* Liens du menu */
 }
 .menus .nav-menu a {
   color: #6d9fe7;
-  font-weight: 500;
   font-size: 25px;
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 .menus .nav-menu a:hover {
   color: #ffa23f;
 }
+.menus {
+  /* Bouton burger caché sur ordinateur */
+}
+.menus .menu-toggle {
+  display: none;
+}
+.menus .menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #111;
+}
 
-h1 {
+.bienvenue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: clamp(300px, 40vw, 500px);
+  padding: 75px 0;
+}
+.bienvenue .background img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.bienvenue h1,
+.bienvenue p {
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  padding: 20px;
+}
+.bienvenue h1 {
+  color: #ffa23f;
   font-family: "Emilys Candy", serif;
-  color: #FFA23F;
+  font-weight: 400;
+  background-color: white;
+  text-align: center;
+  border-radius: 30px;
+  padding: 25px;
+  margin: 50px;
 }
 
 @font-face {
@@ -134,8 +180,69 @@ h3 {
 }
 
 p {
-  font-family: "Qwitcher Grypen";
+  font-family: "Emilys Candy", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 890px) {
+  .menus {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* Navigation cachée sur mobile */
+  }
+  .menus .navigation {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .menus .navigation.active {
+    display: block;
+  }
+  .menus {
+    /* Menu vertical */
+  }
+  .menus .nav-menu {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+  .menus .nav-menu a {
+    font-size: 15px;
+  }
+  .menus {
+    /* Bouton burger */
+  }
+  .menus .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* Enlève le style par défaut du bouton */
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .menus .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #111;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .menus .menu-toggle {
+    /* Transformation en croix */
+  }
+  .menus .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menus .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menus .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }/*# sourceMappingURL=style.css.map */

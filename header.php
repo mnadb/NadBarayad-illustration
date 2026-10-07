@@ -22,17 +22,7 @@
 <header class="header">   
     <nav class="menus">
 
-        <!-- Bouton hamburger -->
-        <button 
-            class="menu-toggle" 
-            aria-controls="nav-menu" 
-            aria-expanded="false"
-            aria-label="Ouvrir le menu"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+       
 
         <!-- Menu WordPress -->
         <div class="navigation">
@@ -45,7 +35,17 @@
             ));
             ?>
         </div>
-
+        <!-- Bouton hamburger -->
+        <button 
+            class="menu-toggle" 
+            aria-controls="nav-menu" 
+            aria-expanded="false"
+            aria-label="Ouvrir le menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </header>
 
